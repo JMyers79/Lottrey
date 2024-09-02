@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lottery Numbers</title>
+</head>
+<body>
+    <h1>Lottery!!</h1>
+    <h2 class = "LottoFor"></h2>
+    <h2 class = "LottoWhile"></h2>
+</body>
+<script>
+    let LottoStrFor;
+
+    let LottoStr = "";
+
+    let RefToLottoFor = document.querySelector(".LottoFor");
+
+    let lotto;
+
+    let RefToLottoWhile = document.querySelector(".LottoWhile");
+
+    for(let num = 1; num <= 6; num++){
+        lotto = Math.floor(Math.random() * 50);
+        LottoStr += "" + lotto.toString() + (num <=5 ? "-":"")
+
+
+    }
+    console.log(LottoStr);
+    RefToLottoFor.textContent = LottoStr;
+
+    //While loop
+
+    let count = 0;
+    lottoStr = "";
+    while (count <= 5){
+        lotto = Math.floor(Math.random() * 50)
+        lottoStr += "" + lotto.toString() + (count <= 4 ? "-": "")
+        count ++;
+
+    }
+
+    console.log(LottoStr);
+    RefToLottoFor.textContent = LottoStr;
+
+</script>
+</html>
